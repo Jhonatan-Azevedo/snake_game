@@ -1,8 +1,8 @@
 import  pygame
 import sys
+from pyautogui import confirm
 from snake import Snake
 from food import Food
-from pyautogui import confirm
 
 def start(nivel):
     pygame.font.init()
@@ -86,13 +86,20 @@ def start(nivel):
         time_clock.tick(base_nivel)
 
 def restart():
-    resp = confirm(text='Game over', title='Welcome Snake_game', buttons=['Reset', 'Quit'])
+    resp = confirm(
+        text='Game over', 
+        title='Welcome Snake_game by: @dev-azevedo', 
+        buttons=['Restart', 'Quit'])
+    
     if resp == 'Quit': 
         return False
-    if resp == 'Reset':
+    if resp == 'Restart':
         return True
 
-resp = confirm(text='Choose the level', title='Welcome Snake_game', buttons=['Ease', 'Medium', 'Hard', 'Cancel'])
+resp = confirm(
+    text='Choose the level \n\n Use the "UP", "RIGHT", "DOWN" and "LEFT" arrow keys or the "W", "D", "S" and "A" keys to move the snake', 
+    title='Welcome Snake_game by: @dev-azevedo', 
+    buttons=['Ease', 'Medium', 'Hard', 'Cancel'])
 
 if resp != 'Cancel':
     fps = 20
