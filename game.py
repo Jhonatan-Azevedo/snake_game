@@ -105,4 +105,5 @@ if resp != 'Cancel':
     if resp == 'Hard':
         fps = 25
 
-    start(fps)
+    if resp != None:
+        start(fps)
