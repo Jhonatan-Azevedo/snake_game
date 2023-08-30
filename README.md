@@ -13,7 +13,7 @@ The main frameworks/libraries used in the project
 
 ## ⚙ How To Use
 
-To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
+To clone and run this application, you'll need Git installed on your computer. From your command line:
 
 ```bash
   git clone https://github.com/dev-azevedo/snake_game.git
